@@ -71,19 +71,17 @@ gui:Destroy()
 
 ------------------------------------------------------------
 -- 🎛 MAIN UI BUTTON
-local MarketplaceService = game:GetService("MarketplaceService")
+
+	local MarketplaceService = game:GetService("MarketplaceService")
 local UserInputService = game:GetService("UserInputService")
-local TweenService = game:GetService("TweenService")
 local HttpService = game:GetService("HttpService")
 local RunService = game:GetService("RunService")
 local CoreGui = game:GetService("CoreGui")
-local Players = game:GetService("Players")
-local Player = Players.LocalPlayer
-local PlayerMouse = Player:GetMouse()
+local PlayerMouse = player:GetMouse()
 
 local redzlib = {
     Themes = {
-        Tày hub = {
+        ["Tày hub"] = { -- SỬA: Thêm [" "] để Lua hiểu được tên có dấu và khoảng trắng
             ["Color Hub 1"] = ColorSequence.new({
                 ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 30)),
                 ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 100, 255)),
@@ -91,9 +89,7 @@ local redzlib = {
             }),
             ["Color Hub 2"] = Color3.fromRGB(10, 20, 40),
             ["Color Stroke"] = Color3.fromRGB(0, 120, 255),
-            ["Color Theme"] = Color3.fromRGB(50, 150, 255),
-            ["Color Text"] = Color3.fromRGB(200, 230, 255),
-            ["Color Dark Text"] = Color3.fromRGB(120, 170, 210)
+            ["Color Theme"] = Color3.fromRGB(50, 150, 255), = Color3.fromRGB(200, 230, 255), = Color3.fromRGB(120, 170, 210)
         }
     },
 	Info = {
